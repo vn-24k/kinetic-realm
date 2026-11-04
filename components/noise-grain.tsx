@@ -2,9 +2,16 @@
 
 import React from "react";
 
-export function NoiseGrain() {
+interface NoiseGrainProps {
+  opacity?: number;
+}
+
+export function NoiseGrain({ opacity = 0.03 }: NoiseGrainProps) {
   return (
-    <div className="pointer-events-none fixed inset-0 z-50 opacity-[0.18] mix-blend-overlay">
+    <div
+      className="pointer-events-none fixed inset-0 z-50 mix-blend-overlay"
+      style={{ opacity }}
+    >
       <svg className="w-full h-full">
         <filter id="shadowNoise">
           <feTurbulence
