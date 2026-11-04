@@ -22,6 +22,8 @@ import {
 } from "lucide-react";
 import { SmoothCursor } from "./smooth-cursor";
 import { NoiseGrain } from "./noise-grain";
+import { NeonCyberButton } from "./uiverse/neon-cyber-button";
+import { GlassOrbCard } from "./uiverse/glass-orb-card";
 
 // ============================================================================
 // 1. DADOS DAS CARTAS NA ESPIRAL 3D (ASSETS ULTRA-HD 4K/8K)
@@ -744,15 +746,14 @@ export function KineticFusionLanding() {
           </a>
         </div>
 
-        <button
+        <NeonCyberButton
           onClick={() => {
             const el = document.getElementById("dive");
             el?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-black font-mono font-bold text-xs tracking-wider transition shadow-[0_0_15px_#22d3ee] cursor-pointer"
         >
           EXPERIMENTAR MERGULHO
-        </button>
+        </NeonCyberButton>
       </nav>
 
       {/* ==================================================================== */}
@@ -937,6 +938,51 @@ export function KineticFusionLanding() {
 scale: 1.0 -> 2.9x`}</code>
             </pre>
           </div>
+        </div>
+      </section>
+
+      {/* ==================================================================== */}
+      {/* 4. SEÇÃO 4: ARSENAL UIVERSE (INTEGRAÇÃO DE 3.800+ COMPONENTES REAIS) */}
+      {/* ==================================================================== */}
+      <section className="py-20 px-6 max-w-6xl mx-auto space-y-10 border-t border-white/10">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div className="space-y-2">
+            <span className="text-xs font-mono px-3 py-1 rounded-full bg-purple-950/60 border border-purple-400/40 text-purple-300 uppercase tracking-widest">
+              ARSENAL UIVERSE INTEGRADO
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight uppercase">
+              COMPONENTES REAIS DA COMUNIDADE (SEM PLACEHOLDERS)
+            </h2>
+            <p className="text-xs text-neutral-400 font-mono">
+              3.802 componentes catalogados localmente em nosso acervo (Buttons, Cards, Loaders, Toggles).
+            </p>
+          </div>
+          <NeonCyberButton
+            onClick={() => {
+              const el = document.getElementById("helix");
+              el?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            VER ESPIRAL 3D
+          </NeonCyberButton>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+          <GlassOrbCard
+            title="NEON CYBER BUTTON"
+            subtitle="Clip-path poligonal dinâmico com animação linear e glow violeta (Uiverse #popular-cobra-99)."
+            badge="BUTTON • CSS3"
+          />
+          <GlassOrbCard
+            title="GLASSMORPHISM ORB"
+            subtitle="Backdrop-filter blur 14px com orbes radiais procedurais flutuantes (Uiverse #good-crab-75)."
+            badge="CARD • BLUR"
+          />
+          <GlassOrbCard
+            title="GLSL WOBBLE VERTEX"
+            subtitle="Deformação senoidal nativa por matriz de vértices sem degradação de FPS (Hank-D-Tank)."
+            badge="SHADER • THREE.JS"
+          />
         </div>
       </section>
 
